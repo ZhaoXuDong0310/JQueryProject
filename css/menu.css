@@ -1,0 +1,77 @@
+a {
+  color: #000;
+  font-weight: bold;
+}
+span {
+  color: #000;
+  font-weight: bold;
+}
+.header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.header .header_container {
+  box-sizing: border-box;
+  padding: 2.5px 0;
+}
+.header .header_container .header_content {
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+}
+.header .header_container .header_content .logo {
+  height: 70px;
+}
+.header .header_container .header_content .logo >img {
+  width: 100%;
+  height: auto;
+  margin-top: 13px;
+}
+.header .header_container .header_content .position {
+  line-height: 70px;
+  margin-left: 80px;
+  display: flex;
+}
+.header .header_container .header_content .position >a .changecity:hover {
+  color: #e94840;
+  transition: color 0.5s;
+}
+.header .header_container .header_content .position .citypoint {
+  vertical-align: middle;
+}
+.header .header_container .header_content .position .city {
+  margin-left: -5px;
+}
+.header .header_container .header_content .position .changecity {
+  color: #000;
+  font-weight: bold;
+}
+.header .header_container .header_content .header_list {
+  height: 70px;
+  line-height: 70px;
+  margin-left: 70px;
+}
+.header .header_container .header_content .header_list >ul {
+  box-sizing: border-box;
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+}
+.header .header_container .header_content .header_list >ul >li {
+  margin-left: -10px;
+}
+.header .header_container .header_content .header_list >ul >li:first-child {
+  margin-left: 0;
+}
+.header .header_container .header_content .header_list >ul >li >a:hover {
+  color: #e94840;
+  transition: color 0.5s;
+}
+.header .header_container .header_content .header_list >ul >.login_wrapper .login {
+  background: #e94840;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
