@@ -1185,14 +1185,14 @@
       }
     });
 
-    $.get('/getShopList',function (data) {
+    $.get('/getUserList',function (data) {
       $('#gym').append(template('temp1', {data:data}))
       console.log(data)
     })
   </script>
   <!-- 创建模板 -->
   <script id="temp1" type="text/html">
-    {{each data.list}}
+    {{each data.data}}
     <div class="box1">
       <div class="zxd">
         <div class="zxd_header">
@@ -1222,6 +1222,7 @@
                 </div>
               </div>
             </a>
+            {{/each}}
           </div>
         </div>
       </div>

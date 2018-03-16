@@ -5,11 +5,9 @@
 const mongoose = require('mongoose')
 // 定义Schema
 const userSchema = new mongoose.Schema({
-  serviceIndex: String,
-  serviceType: Array,
-  shopList: Array
-},{
-  connection:'shops'
+  serviceIndex: {type: String},
+  serviceType: {type: Array},
+  shopList: {type: Array}
 })
 // 向外暴露Schema
-module.exports = mongoose.model('user', userSchema)
+module.exports = mongoose.model('shops', userSchema)

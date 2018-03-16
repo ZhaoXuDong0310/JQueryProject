@@ -11,9 +11,10 @@ app.use(express.static('public'))
 const userSchema = require('./models/user')
 
 app.get('/getUserList', function(req,res){
-  userSchema.find({},function(err,list){
+  userSchema.find({},function(err,data){
     if (!err) {
-      res.send({list:list})
+      res.send({data:data})
+      console.log(data)
     }
   })
 })
