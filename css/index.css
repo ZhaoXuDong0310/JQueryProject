@@ -184,10 +184,16 @@ body {
   position: relative;
 }
 .home .home-menu-container .home-menu .home-menu-list .home-menu-item:hover {
-  background: #23527c;
+  background: #60646d;
 }
 .home .home-menu-container .home-menu .home-menu-list .home-menu-item:hover >.home-menu2 {
   display: block;
+}
+.home .home-menu-container .home-menu .home-menu-list .home-menu-item:hover .cat {
+  display: block;
+}
+.home .home-menu-container .home-menu .home-menu-list .home-menu-item:hover >img {
+  display: none;
 }
 .home .home-menu-container .home-menu .home-menu-list .home-menu-item >span {
   width: 70px;
@@ -201,6 +207,14 @@ body {
   position: absolute;
   right: 35px;
   top: 20px;
+}
+.home .home-menu-container .home-menu .home-menu-list .home-menu-item .cat {
+  width: 6px;
+  height: 11px;
+  position: absolute;
+  left: 174px;
+  top: 16px;
+  display: none;
 }
 .home .home-menu-container .home-menu .home-menu-list .home-menu-item .home-menu2 {
   position: absolute;
@@ -392,7 +406,7 @@ body {
 }
 .servi >ul >li >img {
   width: 20px;
-  height: 20px;
+  heigth: 20px;
   vertical-align: middle;
   margin-right: 10px;
 }
@@ -456,9 +470,23 @@ body {
   margin-left: 1%;
 }
 .beian >ul >li:first-child {
-  margin-left: 0;
+  margin: 0;
 }
 .beian >ul >li >img {
   width: 100px;
   height: auto;
+}
+.beian2 {
+  height: 40px;
+  line-height: 40px;
+  padding-top: 0;
+  width: 100%;
+  text-align: center;
+  clear: both;
+}
+.beian2 >p {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  color: #898989;
 }
