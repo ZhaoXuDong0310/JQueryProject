@@ -12,6 +12,43 @@ i {
   margin: 0;
   padding: 0;
 }
+.header2 {
+  position: fixed;
+  animation: play 0.5s;
+  z-index: 999;
+}
+@-moz-keyframes play {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes play {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-o-keyframes play {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes play {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .header {
   width: 100%;
   background: #fff;
