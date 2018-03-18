@@ -41,16 +41,11 @@ app.get('/getItemsList', function(req,res){
 })
 
 app.get('/getComments', function(req, res){
-  // commentsSchema.find({}, function(err, data){
-  //   if (!err) {
-  //     res.send({data:data})
-  //     console.log(data)
-  //   }
-  // })
+
   // 获取请求中的page
   const page = req.query.page
   // 设置分页公式 - 一页显示多少数据
-  commentsSchema.find().limit(10).skip((page-1)*10).exec(function(err, data){
+  commentsSchema.find({}).limit(10).skip((page-1)*10).exec(function(err, data){
     if (!err) {
       res.send({data: data})
     }

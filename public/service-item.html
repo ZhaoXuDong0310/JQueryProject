@@ -93,7 +93,7 @@
           </div>
           <!-- 分页器 -->
           <div class="pages">
-            <a href="" class="up nopage">上一页</a>
+            <a href="javascript:" class="up nopage">上一页</a>
             <div class="showpage">
               <a href="javascript:" class="num act">1</a>
               <a href="javascript:" class="num">2</a>
@@ -107,7 +107,7 @@
               <a href="javascript:" class="num">10</a>
               ...
             </div>
-            <a href="" class="down">下一页></a>
+            <a href="javascript:" class="down">下一页></a>
           </div>
         </div>
       </div>
@@ -187,6 +187,9 @@
 </div>
 <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
 <script type="text/javascript">
+
+  var page = 1 // 页数
+
   $(function () {
     $(document).scroll(function () {
       if($(this).scrollTop()>=71){
@@ -209,9 +212,9 @@
     $('#zxxd').append(template('temp5', {data: data}))
   })
 
-  var page = 1 // 页数
+
   $.get('/getComments?page=' + page,function (data) {
-    $('#parent').append(template('temp6', {data: data}))
+    $('#parent').html(template('temp6', {data: data}))
   })
 
     const $aList = $('.showpage>a')
@@ -224,7 +227,24 @@
       page = ++index
       console.log(page);
       $.get('/getComments?page=' + page, function(data) {
-        $('.comment').html(template('temp6', {data: data}))
+        $('.conment').html(template('temp6', {data: data}))
+        console.log(data);
+      })
+    })
+
+    $('.up').click(function() {
+      alert('已经获取到上一页标签')
+      page--
+      $.get('/getComments?page=' + page, function (data) {
+        $('.conment').html(template('temp6', {data: data}))
+        console.log(data);
+      })
+    })
+
+    $('.down').click(function(){
+      page++
+      $.get('/getComments?page=' + page, function (data) {
+        $('.conment').html(template('temp6', {data: data}))
         console.log(data);
       })
     })
